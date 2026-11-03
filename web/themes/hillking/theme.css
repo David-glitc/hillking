@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Chivo:wght@400;500;700;800&family=VT323&display=swap');
+/* Hillking: an arcade cabinet at midnight; one player holds the hill while the clock runs down. Midnight violet, coin yellow, pixel purple, turf green. */
+:root{--scheme:dark;--bg:#0B0820;--surface:#120E2E;--surface-2:#1A1540;--input-bg:#07051A;--tile:#1A1540;
+ --ink:#F7F3FF;--ink-2:#B9B0DD;--line:#2A2357;--line-strong:#6E64AA;
+ --accent:#FFD400;--accent-hover:#FFE14D;--accent-ink:#1A1300;--accent-text:#FFDB33;--link:#BC94FF;--focus:#BC94FF;
+ --danger:#FF4D6D;--danger-bg:#2E0E1C;--danger-text:#FF8EA2;--scrim:rgba(4,3,14,.82);
+ --radius-sm:0;--radius-md:0;--radius-lg:0;--radius-btn:0;--radius-pill:0;--border-w:3px;
+ --shadow-1:6px 6px 0 #05040F;--shadow-2:10px 10px 0 #05040F;--shadow-btn:4px 4px 0 #05040F;
+ --font-display:'Press Start 2P',monospace;--font-body:'Chivo',system-ui,sans-serif;--font-label:'Chivo',system-ui,sans-serif;--font-mono:'VT323',ui-monospace,monospace;
+ --display-weight:400;--display-tracking:0;--display-case:uppercase;--label-tracking:.14em;
+ --hero-bg:radial-gradient(50% 50% at 70% 40%,rgba(188,148,255,.26),transparent 70%),radial-gradient(40% 40% at 25% 85%,rgba(255,212,0,.14),transparent 70%),var(--bg);
+ --hero-pattern:linear-gradient(90deg,rgba(247,243,255,.05) 2px,transparent 2px),linear-gradient(rgba(247,243,255,.05) 2px,transparent 2px);--hero-pattern-size:24px 24px;--hero-pattern-opacity:1;
+ --chip-bg:rgba(18,14,46,.95);--live:#4BE07A;--live-ring:rgba(75,224,122,.3);--art-glow:radial-gradient(circle,rgba(188,148,255,.5),rgba(255,212,0,.2) 55%,transparent 72%);--ticker-bg:#120E2E}
+/* Signature: square pixel shadows, scanlines, insert-coin steps. */
+h1{font-size:clamp(1.7rem,4.2vw,3.1rem);line-height:1.25;max-width:16ch}
+h2{font-size:clamp(1.05rem,2.2vw,1.5rem);line-height:1.4}
+h3{font-size:.8rem;line-height:1.5}
+.brand{font-size:1rem}
+.app-title h1{font-size:clamp(1.4rem,3.4vw,2.2rem)}
+.panel>h2,.stage h2{font-size:clamp(.95rem,1.8vw,1.2rem)}
+.steps li{border:3px solid var(--line-strong);box-shadow:var(--shadow-1)}
+.steps li:before{content:'P' counter(step);font-family:var(--font-display);font-size:.9rem;color:var(--accent-text)}
+.features div{border-left:6px solid var(--accent);padding-left:16px}
+.features div:nth-child(even){border-left-color:var(--link)}
+.cta-band{border:3px solid var(--accent);background:repeating-linear-gradient(0deg,rgba(247,243,255,.04) 0 2px,transparent 2px 4px),var(--surface)}
+.ticker span{font-family:var(--font-display);font-size:.6rem;letter-spacing:.06em}
+.ticker span:after{width:8px;height:8px;border-radius:0}
+.hero-chip,.badge,.stats,.status,input,select,textarea,.stage,.panel,.rules,.contract,.assets a,.chain-badge{border-radius:0}
+button,a.button{text-transform:uppercase;font-weight:800;letter-spacing:.04em}
+button:active:not(:disabled),a.button:active{transform:translate(3px,3px)}
+.stats dd{font-family:var(--font-mono);font-size:1.5rem;font-weight:400}
+
+/* App: the summit. */
+.summit{display:grid;gap:18px}
+.hill{display:block;width:100%;height:auto;border:3px solid var(--line-strong);image-rendering:pixelated}
+.hill .sky{fill:#140F3A}.hill .stars rect{fill:#F7F3FF}.hill .moon rect{fill:#FFE9A8}
+.hill .far{fill:#241C5C}.hill .slope{fill:#2E7A4A}.hill .grass{fill:#4BE07A}
+.hill .pole{stroke:#F7F3FF;stroke-width:4}.hill .flag{fill:#FFD400}.hill .flag-text{font-family:'Press Start 2P',monospace;font-size:11px;fill:#1A1300}
+.hill .king .body{fill:#BC94FF}.hill .king .head{fill:#FFD9B8}.hill .king .crown{fill:#FFD400}
+.hill .empty-text{font-family:'Press Start 2P',monospace;font-size:12px;fill:#B9B0DD}
+.hill .flag{animation:wave 1.4s steps(2) infinite}
+@keyframes wave{50%{transform:translateY(2px)}}
+.scoreboard{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.scoreboard>div{padding:14px;background:var(--surface-2);border:3px solid var(--line-strong)}
+.scoreboard .sub{margin:0 0 6px}
+.scoreboard strong{display:block;font-family:var(--font-mono);font-size:2rem;line-height:1;color:var(--ink);overflow-wrap:anywhere}
+.scoreboard .tiny{display:block;margin-top:6px}
+.clock strong{font-size:3.4rem;color:var(--accent-text);text-shadow:0 0 12px rgba(255,212,0,.45)}
+.clock.danger{border-color:var(--danger)}
+.clock.danger strong{color:var(--danger-text);animation:blink 1s steps(2) infinite}
+.clock.rang strong{color:var(--ink-2);text-shadow:none}
+@keyframes blink{50%{opacity:.45}}
+.reign{margin:0;font-size:.95rem;color:var(--ink)}
+.ladder-title{margin:6px 0 0}
+.ladder{list-style:none;margin:0;padding:0;border:3px solid var(--line)}
+.ladder li{display:grid;grid-template-columns:40px minmax(0,1fr) minmax(0,1.3fr) auto;gap:12px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--line);font-size:.9rem}
+.ladder li:last-child{border-bottom:0}
+.ladder li.top{background:linear-gradient(90deg,rgba(255,212,0,.16),transparent 70%)}
+.ladder .rank{font-family:var(--font-display);font-size:.7rem;color:var(--ink-2)}
+.ladder li.top .rank{font-family:var(--font-body);font-size:1.3rem;color:var(--accent-text)}
+.ladder .banner{color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ladder .mono{font-size:1.2rem;color:var(--accent-text)}
+.history h3{margin:8px 0 10px}
+.history ul{list-style:none;margin:0;padding:0}
+.history li{display:grid;grid-template-columns:90px minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.88rem}
+.history b{font-weight:400;font-size:1.2rem;color:var(--accent-text)}
+.throne-head h2{margin:10px 0 8px}
+.purse{display:grid;gap:6px;margin-top:22px;padding:14px;border:3px dashed var(--accent)}
+.purse .sub{margin:0}
+.purse strong{font-family:var(--font-mono);font-size:1.8rem;font-weight:400;color:var(--accent-text)}
+@media(max-width:640px){.scoreboard{grid-template-columns:1fr}.clock strong{font-size:3rem}.ladder li{grid-template-columns:32px minmax(0,1fr) auto}.ladder .banner{display:none}.history li{grid-template-columns:minmax(0,1fr) auto}.history li span:first-child,.history .tiny{display:none}}
+@media(max-width:480px){.stats dd{font-size:1.15rem}}

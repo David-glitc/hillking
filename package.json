@@ -1,0 +1,28 @@
+{
+  "name": "hillking",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "contracts:build": "cd contracts && forge build",
+    "test": "cd contracts && forge test",
+    "build": "node scripts/build.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "deploy:contracts": "node scripts/deploy.mjs",
+    "deploy:sites": "node scripts/deploy-sites.mjs",
+    "preview": "node scripts/preview.mjs",
+    "check:browser": "node scripts/browser-check.mjs",
+    "fork:check": "node scripts/fork-check.mjs",
+    "publish": "node scripts/deploy-vercel.mjs"
+  },
+  "dependencies": {
+    "viem": "2.55.19"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "@playwright/test": "1.56.1"
+  },
+  "description": "King of the Hill on BOT Chain. Each claim resets a 10-minute clock and pays the old king a 10% toll. When the bell rings, the king takes 70% of the pot.",
+  "license": "MIT",
+  "repository": "https://github.com/David-glitc/hillking",
+  "homepage": "https://hillkingbot.vercel.app"
+}

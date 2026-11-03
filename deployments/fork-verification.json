@@ -1,0 +1,9 @@
+{
+  "localOnly": true,
+  "chainId": 677,
+  "checkedAt": "2026-11-03T09:48:13.412Z",
+  "hillking": {
+    "flow": "claim hill → wait for bell → settle → withdraw",
+    "rounds": "2"
+  }
+}

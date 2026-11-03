@@ -1,0 +1,36 @@
+{
+  "chainId": 677,
+  "network": "mainnet",
+  "deployer": "0x766d0d810eCF822e02df47CDb5A389777f291895",
+  "local": false,
+  "contracts": {
+    "Hillking": "0x3b9abc82e267af598ab89697cfdd0ea59d5b6167"
+  },
+  "actions": {
+    "deploy:Hillking": {
+      "hash": "0xedfee5cb134f44bb22e7275cdb353f484279504a0bd9a1b7ba5da3bae45e1b62",
+      "receipt": {
+        "transactionHash": "0xedfee5cb134f44bb22e7275cdb353f484279504a0bd9a1b7ba5da3bae45e1b62",
+        "contractAddress": "0x3b9abc82e267af598ab89697cfdd0ea59d5b6167",
+        "blockNumber": "28953541",
+        "gasUsed": "1172805",
+        "gasPrice": "20000000000"
+      }
+    }
+  },
+  "gasSpentWei": "209669280000000000",
+  "ready": true,
+  "infrastructure": {
+    "USDT": "0xaBabc7Ddc03e501d190C676BF3d92ef0e6e87a3C",
+    "WBOT": "0xD5452816194a3784dBa983426cCe7c122F4abd30",
+    "router": "0x07032d47A1b9f8460cBeE9dC17c1d3E438693929",
+    "quoter": "0x034A705b36067cff99ABf5C662Be881cBd8d0176",
+    "fee": 3000
+  },
+  "launched": {
+    "hillking": "2026-11-03T09:53:16.075Z"
+  },
+  "sourceHashes": {
+    "Hillking": "0x86410dd7114f62cdca638d853fe3bfea934246195ad6cae83a206c4a6b9e7877"
+  }
+}
